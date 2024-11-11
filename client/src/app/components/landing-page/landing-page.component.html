@@ -2,20 +2,20 @@
   <app-loader-spinner></app-loader-spinner>
 </div>
 <div class="main-container" *ngIf="!isLoading">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" style="border: 20px solid #7e7e7e;">
+  <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+    <div class="carousel-inner" style="border: 20px solid #ffffff;">
       <div class="carousel-item active">
         <img class="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCftHXS0-qr_FCvqO973mCA35ox90bE7vDw&usqp=CAU"  alt="Second slide">
+          src="https://cdn.shopify.com/s/files/1/0399/8652/8410/files/WEBSITE_SLIDE_1_UPDATE_bccb37f1-4677-4269-87e7-778ab3b701ef_970x@2x.jpg?v=1673426728" height="650px" alt="Second slide">
       </div>
       <div class="carousel-item ">
         <img class="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH6byIuxAyifgGwFD1K_LUkbZ6F0LLT7UkSyeYD0rsRa-HGlB4-3cGrAyVRlADFaNHl0M&usqp=CAU" 
+          src="https://littleindiaonline.com.au/wp-content/uploads/2024/02/6.png" height="650px"
           alt="First slide">
       </div>
       <div class="carousel-item">
         <img class="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-jrQSSZdS5-uRbWBTu_50lbqj8sPxC3rpgA&usqp=CAU"
+          src="https://i2.wp.com/www.onegreenplanet.org/wp-content/uploads/2018/01/vegan-grocery.jpg?resize=1600%2C1000" height="650px"
           alt="Third slide">
       </div>
     </div>
@@ -55,7 +55,14 @@
           <input class="form-check-input" type="checkbox" value="vegitables" id="vegitables" [(ngModel)]="vegitablesSelected"
             (change)="filterItems()">
           <label class="form-check-label" for="vegitables">
-            Vegitables
+            Vegetables
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="other_items" id="other_items" [(ngModel)]="otherItemsSelected"
+            (change)="filterItems()">
+          <label class="form-check-label" for="other_items">
+            Other Items
           </label>
         </div>
        
@@ -73,7 +80,7 @@
             <h4 class="card-title m-0 text-dark">{{product.productname}}</h4>
             <p class="card-text m-0 description" style="font-size: 14px; color: #888888;">{{product.description}}</p>
             <div class="d-flex align-items-center justify-content-between">
-              <p class="card-text mt-0 text-dark">price: {{product.price}}/Kg</p>
+              <p class="card-text mt-0 text-dark">price: {{product.price}}/Kg/l/g</p>
               <div class="d-flex align-items-center justify-content-center pt-3 pb-0 bg-success text-light"
                 style="width: 60px; height: 30px; border-radius: 4px; gap: 4px;">
                 <p>{{product.rating}}</p>

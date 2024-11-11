@@ -16,6 +16,7 @@ export class LandingPageComponent {
   public isLoading = false;
   fruitsSelected = '';
   vegitablesSelected = '';
+  otherItemsSelected = '';
 
   regForm: FormGroup;
 
@@ -48,10 +49,11 @@ export class LandingPageComponent {
         !this.searchInput ||
         product.productname.toLowerCase().includes(this.searchInput.toLowerCase());
 
-      const categoryMatch =
-        ((!this.fruitsSelected && !this.vegitablesSelected ) ||
+        const categoryMatch =
+        ((!this.fruitsSelected && !this.vegitablesSelected && !this.otherItemsSelected) ||
           (this.fruitsSelected && product.category === 'fruits') ||
-          (this.vegitablesSelected && product.category === 'vegitables'));
+          (this.vegitablesSelected && product.category === 'vegitables') ||
+          (this.otherItemsSelected && product.category === 'other_items')); 
 
       return searchMatch && categoryMatch;
     });
