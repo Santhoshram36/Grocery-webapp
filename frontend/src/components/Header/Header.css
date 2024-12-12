@@ -1,0 +1,62 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.jpg') no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+.header-contents h2{
+    font-weight: 500;
+    color: rgb(255, 255, 255); /* The primary color will be white */
+    font-size: max(4.5vw, 22px);
+    text-shadow: 4px 4px 2px rgb(0, 0, 0); /* This adds a black shadow effect to simulate double color */
+}
+
+.header-contents p {
+    color: white;
+    font-size: 1vw;
+    text-shadow: 2px 2px 0px black; /* Black shadow effect for p as well */
+}
+.header-contents button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+
+@media (max-width:1050px){
+.header-contents{
+    max-width: 45%;
+}
+}
+
+@media (max-width:750px){
+    
+    .header-contents{
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
